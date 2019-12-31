@@ -12,6 +12,9 @@ class Stack:
         self.stack = []
 
     def __str__(self):
+        """
+        Allow us to print out the current stack.
+        """
         return str(self.stack)
 
     def push(self, item):
