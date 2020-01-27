@@ -8,7 +8,7 @@ class SelectSort
         int smallest;
         int temp;
 
-        for (int i=0; i<nums.length; i++)
+        for (int i=0; i<nums.length - 1; i++)
         {
             // find the smallest element in the array
             smallest = i;
