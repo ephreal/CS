@@ -1,42 +1,31 @@
-# See documentation.needs.management/index.php/Search_Algorithms for
-# the algorithm followed.
-
-
-def binary_search(x, item):
-    """
-    Binary search implemented in python
+def binary_search(search_list, target):
+    """"
+    An implementation of a binary search in python.
+    Returns the index in the list if the item is found. Returns None
+    if not.
     """
 
-    # Start at the center of the search space (or as close as possible)
-    highest = len(x)
-    lowest = 0
-    index = len(x)//2
-    while not x[index] == item:
-        if index < 0 or highest == lowest:
-            # item not in the list
-            return
-        if x[index] < item:
-            lowest = index
-            mod = (highest - lowest)//2
-            if mod == 0:
-                # Item is above the range of the list
-                return
-            index += mod
-        elif x[index] > item:
-            highest = index
-            index -= (highest) - (lowest)
-    return index
+    first = 0
+    last = len(search_list) - 1
+
+    while first <= last:
+        midpoint = (first + last) // 2
+
+        if search_list[midpoint] == target:
+            return midpoint
+
+        elif search_list[midpoint] < target:
+            first = midpoint + 1
+
+        elif search_list[midpoint] > target:
+            last = midpoint - 1
+
+    return None
 
 
-def run_search(x, item):
-    y = binary_search(x, item)
-    if y is not None:
-        print(f"Found at index {y}, x[{y}]: {x[y]}")
-    else:
-        print("Error, item not found")
+x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+y = binary_search(x, 5)
+print(y)
 
-
-x = [1, 2, 3, 4, 5]
-
-for i in range(0, 7):
-    run_search(x, i)
+y = binary_search(x, 10)
+print(y)
