@@ -8,8 +8,3 @@ def linear_search(searchable_list, target):
             return i
 
     return None
-
-x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-
-y = linear_search(x, 9)
-print(y)

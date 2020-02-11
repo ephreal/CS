@@ -21,11 +21,3 @@ def binary_search(search_list, target):
             last = midpoint - 1
 
     return None
-
-
-x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-y = binary_search(x, 5)
-print(y)
-
-y = binary_search(x, 10)
-print(y)
