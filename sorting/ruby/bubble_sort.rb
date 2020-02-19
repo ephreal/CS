@@ -19,8 +19,3 @@ def bubble_sort(x)
     end
     return x
 end
-
-x = [2, 5, 1, 0, 4, 66, 123, 864, -0, 11, -3234]
-puts x.join(" ")
-y = bubble_sort(x)
-puts y.join(" ")

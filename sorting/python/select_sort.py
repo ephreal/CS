@@ -16,15 +16,7 @@ def select_sort(x):
             if x[j] < temp:
                 temp = x[j]
                 temp_index = j
-        print(temp)
-        print(temp_index)
         x[temp_index] = x[i]
         x[i] = temp
 
     return x
-
-
-x = [1, 7, 3, 2, -1, 0, -99, 123, 63, 393939393, -2, -123, 0, 0]
-y = select_sort(x)
-
-print(y)

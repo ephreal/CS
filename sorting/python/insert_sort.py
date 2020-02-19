@@ -17,10 +17,3 @@ def insert_sort(x):
         x.insert(i, value)
 
     return x
-
-
-x = [4, 2, 7, 2, 9, -39, 211, 34, 90, 2134, -3490323, 1437342, 1]
-
-y = insert_sort(x)
-print(x)
-print(y)

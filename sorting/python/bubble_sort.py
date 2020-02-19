@@ -20,8 +20,3 @@ def bubble_sort(x):
                 swaps = True
 
     return x
-
-
-x = [7, 3, 1, 0, 77, 99, -123, 6543, -0]
-y = bubble_sort(x)
-print(y)
